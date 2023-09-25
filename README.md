@@ -18,7 +18,7 @@
  - nRF Connect for Desktop のProgrammerを起動し、左上のプルダウンから"Open DFU Bootloader"を選択します。
  - Add fileよりfirmwareディレクトリ内のtemp_app_stamped_lyx.hex、s140_nrf52_6.1.1_softdevice.hexを選択します。
  - Erace & writeボタンで書き込みを行います。
- →正常に書き込みが終わると"Kawaii dongle"として認識されます。
+ →正常に書き込みが終了すると"Kawaii dongle"として認識されます。
  
  ## 書き込み(二回目以降)
  
