@@ -2,6 +2,7 @@
 
 ## 事前準備
 
+ - SteamVRがインストールされていない場合はインストールします。
  - githubよりFW_gen.batを作業用のディレクトリにダウンロードします。
  - [SRecord(.zip)](https://sourceforge.net/projects/srecord/files/srecord-win32/)をダウンロードし、bin/srec_cat.exeをFW_gen.batと同じディレクトリに配置します。
  - [nRF Connect for Desktop](https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-desktop)をダウンロード&インストールし、内部のProgrammerツールをインストールします。
