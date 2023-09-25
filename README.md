@@ -15,7 +15,7 @@
  - ドングルをUSB経由でPCに接続します。
 →正常に接続されると"OpenDFU Bootloader"がwindowsで認識されます。
 →正常に認識されない場合、二回目以降の書き込みの場合は##書き込み(二回目以降)をご覧ください。
- - nRF Connect for Desktop のProgrammerを起動し、"Open DFU Bootloader"を選択します。
+ - nRF Connect for Desktop のProgrammerを起動し、左上のプルダウンから"Open DFU Bootloader"を選択します。
  - Add fileよりfirmwareディレクトリ内のtemp_app_stamped_lyx.hex、s140_nrf52_6.1.1_softdevice.hexを選択します。
  - Erace & writeボタンで書き込みを行います。
  →正常に書き込みが終わると"Kawaii dongle"として認識されます。
