@@ -15,8 +15,8 @@ if exist "gd_1558748372_dfu" (
     rmdir /s /q "gd_1558748372_dfu"
 )
 
-:: Create new directory
-echo Creating a directory...
+:: Create new directories
+echo Creating directories...
 mkdir "firmware"
 mkdir "gd_1558748372_dfu"
 
