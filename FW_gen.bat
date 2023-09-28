@@ -7,7 +7,7 @@ setlocal enabledelayedexpansion
 :: SteamVR directory settings
 set "steamvrDir=C:\Program Files (x86)\Steam\steamapps\common\SteamVR"
 
-::Delete old directories
+:: Delete old directories
 if exist "firmware" (
     rmdir /s /q "firmware"
 )
