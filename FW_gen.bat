@@ -36,7 +36,7 @@ powershell "iex((@('')*3+(cat '%~f0'|select -skip 44))-join[char]10)"
 
 :: Exit
 pause
-exit /b %ERRORLEVEL%
+exit /b
 
 
 
