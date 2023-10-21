@@ -1,5 +1,5 @@
 :: Fw_gen.bat
-:: ver 2.2
+:: ver 2.3
 
 @echo off
 setlocal enabledelayedexpansion
@@ -27,17 +27,19 @@ powershell -Command "Expand-Archive -Path '%steamvrDir%\drivers\indexhmd\resourc
 :: File copying
 copy gd_1558748372_dfu\temp_app_stamped.bin gd_1558748372_dfu\temp_app_stamped_lyx.bin > nul
 
+:: Binary rewriting (USB device name to "Watchaman Radio")
+powershell -Command "$filePath = 'gd_1558748372_dfu\temp_app_stamped_lyx.bin'; $newValues = 0x57,0x61,0x74,0x63,0x68,0x6D,0x61,0x6E,0x20,0x52,0x61,0x64,0x69,0x6F; $offset = 0x162E0; $bytes = [System.IO.File]::ReadAllBytes($filePath); for ($i = 0; $i -lt $newValues.Length; $i++) { $bytes[$offset + $i] = $newValues[$i] }; [IO.File]::WriteAllBytes($filePath, $bytes)"
+
 :: Binary rewriting (to LYX)
 powershell -Command "$filePath = 'gd_1558748372_dfu\temp_app_stamped_lyx.bin'; $newValue = 0xB9; $offset = 0x1839D; $bytes = [System.IO.File]::ReadAllBytes($filePath); $bytes[$offset] = $newValue; [IO.File]::WriteAllBytes($filePath, $bytes)"
 
 :: Convert bin to uf2
 set args=%*
-powershell "iex((@('')*3+(cat '%~f0'|select -skip 44))-join[char]10)"
+powershell "iex((@('')*3+(cat '%~f0'|select -skip 45))-join[char]10)"
 
 :: Exit
 pause
 exit /b
-
 
 
 :: The following is powershell script
