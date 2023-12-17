@@ -9,6 +9,7 @@
 ## FWの生成
 
  - FW_gen.batをダウンロードして実行します。  
+   ※起動モードはDYXを選択します。   
    ※Powershellを実行できる環境で使用してください。  
    ※SteamVRを標準以外のディレクトリにインストールしている場合はbatファイル内部の"steamvrDir"を変更してください。
 
@@ -18,7 +19,7 @@
     ※正常に接続されると"FLOW_UF2"ドライブがＷindowsで認識されます。  
     ※正常に認識されない場合、もしくは二回目以降の書き込みの場合は"書き込み(二回目以降)"をご覧ください。
 
- 3.  生成した"temp_app_stamped_lyx.uf2"を"SERIES_UF2"ドライブにDnDまたはコピーします。  
+ 3.  生成した"temp_app_stamped_dyx.uf2"を"FLOW_UF2"ドライブにDnDまたはコピーします。  
      ※書き込みは一つずつ行ってください。  
      ※書き込みが終了するとドライブは表示されなくなります。
 
@@ -27,13 +28,10 @@
 
  ## 書き込み(二回目以降)
  
- - ドングルを接続した状態でドングル本体裏面左上にあるリセットボタンをダブルクリックします。(以降は同じ)
+ - ドングルを接続した状態でドングル本体にあるリセットボタンをダブルクリックします。(以降は同じ)
 
-# 製品仕様
+# Feature
 
- - ×3 nrf52840RFチップ及び内臓アンテナ
- - uf2対応ブートローダによるUSB経由のファームウェア書き込み
- - USB2.0対応のアップストリームType-Cコネクタ
- - ダウンストリームType-Aコネクタによるチェーン接続
- - 物理リセットボタン
-
+ - A bat file that modifies the Index HMD firmware and creates Watchman Dongle firmware for nrf52840.
+ - Generate uf2 and bin files.
+ - Index HMD's four boot modes can be changed without hardware modification.
